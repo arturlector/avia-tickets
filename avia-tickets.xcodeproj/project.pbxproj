@@ -14,6 +14,7 @@
 		12694AAE25F25DF2006BBC1F /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 12694AAD25F25DF2006BBC1F /* City.m */; };
 		12694AB225F25DFA006BBC1F /* Airport.m in Sources */ = {isa = PBXBuildFile; fileRef = 12694AB125F25DFA006BBC1F /* Airport.m */; };
 		12694AB625F26DEE006BBC1F /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 12694AB525F26DEE006BBC1F /* DataManager.m */; };
+		12694ABC25F27549006BBC1F /* PlaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12694ABB25F27549006BBC1F /* PlaceViewController.m */; };
 		12BABEA825F23D0900DA8D5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BABEA725F23D0900DA8D5A /* AppDelegate.m */; };
 		12BABEAE25F23D0900DA8D5A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12BABEAD25F23D0900DA8D5A /* MainViewController.m */; };
 		12BABEB325F23D0B00DA8D5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12BABEB225F23D0B00DA8D5A /* Assets.xcassets */; };
@@ -33,6 +34,9 @@
 		12694AB125F25DFA006BBC1F /* Airport.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Airport.m; sourceTree = "<group>"; };
 		12694AB425F26DEE006BBC1F /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		12694AB525F26DEE006BBC1F /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		12694ABA25F27549006BBC1F /* PlaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlaceViewController.h; sourceTree = "<group>"; };
+		12694ABB25F27549006BBC1F /* PlaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceViewController.m; sourceTree = "<group>"; };
+		12694ABF25F27963006BBC1F /* SearchRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchRequest.h; sourceTree = "<group>"; };
 		12BABEA325F23D0900DA8D5A /* avia-tickets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "avia-tickets.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		12BABEA625F23D0900DA8D5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		12BABEA725F23D0900DA8D5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +100,23 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		12694AB825F27506006BBC1F /* Place */ = {
+			isa = PBXGroup;
+			children = (
+				12694AB925F27526006BBC1F /* ViewController */,
+			);
+			path = Place;
+			sourceTree = "<group>";
+		};
+		12694AB925F27526006BBC1F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12694ABA25F27549006BBC1F /* PlaceViewController.h */,
+				12694ABB25F27549006BBC1F /* PlaceViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		12BABE9A25F23D0900DA8D5A = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +167,9 @@
 		12BABEC325F24E6700DA8D5A /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				12694ABF25F27963006BBC1F /* SearchRequest.h */,
 				12BABEC925F2514000DA8D5A /* Main */,
+				12694AB825F27506006BBC1F /* Place */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -236,6 +259,7 @@
 				12694AA925F25DE0006BBC1F /* Country.m in Sources */,
 				12694AB625F26DEE006BBC1F /* DataManager.m in Sources */,
 				12BABEAE25F23D0900DA8D5A /* MainViewController.m in Sources */,
+				12694ABC25F27549006BBC1F /* PlaceViewController.m in Sources */,
 				12694AB225F25DFA006BBC1F /* Airport.m in Sources */,
 				12BABEA825F23D0900DA8D5A /* AppDelegate.m in Sources */,
 				12BABEB925F23D0B00DA8D5A /* main.m in Sources */,
