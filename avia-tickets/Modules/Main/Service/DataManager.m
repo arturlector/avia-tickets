@@ -25,6 +25,19 @@
     return instance;
 }
 
+#pragma mark - Public
+
+- (City *)cityForIATA:(NSString *)iata {
+    if (iata) {
+        for (City *city in _citiesArray) {
+            if ([city.code isEqualToString:iata]) {
+                return city;
+            }
+        }
+    }
+    return nil;
+}
+
 - (void)loadData
 {
     dispatch_async(dispatch_get_global_queue(QOS_CLASS_UTILITY, 0), ^{
@@ -48,6 +61,8 @@
         NSLog(@"Complete load data");
     });
 }
+
+#pragma mark - Private
 
 - (NSMutableArray *)createObjectsFromArray:(NSArray *)array withType:(DataSourceType)type
 {
