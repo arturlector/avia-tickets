@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		120E154E25FBE66800AED786 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 120E154D25FBE66800AED786 /* MapPrice.m */; };
+		120E155325FBE6D800AED786 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 120E155225FBE6D800AED786 /* LocationManager.m */; };
+		120E155925FBE9BF00AED786 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120E155825FBE9BF00AED786 /* MapViewController.m */; };
 		12694AA025F25D64006BBC1F /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 12694A9D25F25D64006BBC1F /* countries.json */; };
 		12694AA125F25D64006BBC1F /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 12694A9E25F25D64006BBC1F /* cities.json */; };
 		12694AA225F25D64006BBC1F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 12694A9F25F25D64006BBC1F /* airports.json */; };
@@ -28,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		120E154C25FBE66800AED786 /* MapPrice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapPrice.h; sourceTree = "<group>"; };
+		120E154D25FBE66800AED786 /* MapPrice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapPrice.m; sourceTree = "<group>"; };
+		120E155125FBE6D800AED786 /* LocationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationManager.h; sourceTree = "<group>"; };
+		120E155225FBE6D800AED786 /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
+		120E155725FBE9BF00AED786 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		120E155825FBE9BF00AED786 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		12694A9D25F25D64006BBC1F /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		12694A9E25F25D64006BBC1F /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		12694A9F25F25D64006BBC1F /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
@@ -84,6 +93,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		120E155625FBE99C00AED786 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				120E155725FBE9BF00AED786 /* MapViewController.h */,
+				120E155825FBE9BF00AED786 /* MapViewController.m */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		12694A9C25F25D36006BBC1F /* JSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,19 +130,23 @@
 				12694AAD25F25DF2006BBC1F /* City.m */,
 				12694AB025F25DFA006BBC1F /* Airport.h */,
 				12694AB125F25DFA006BBC1F /* Airport.m */,
+				120E154C25FBE66800AED786 /* MapPrice.h */,
+				120E154D25FBE66800AED786 /* MapPrice.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		12694AA625F25D7E006BBC1F /* Service */ = {
+		12694AA625F25D7E006BBC1F /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				12694AB425F26DEE006BBC1F /* DataManager.h */,
 				12694AB525F26DEE006BBC1F /* DataManager.m */,
 				1283CB9B25F695F10029767A /* APIManager.h */,
 				1283CB9C25F695F10029767A /* APIManager.m */,
+				120E155125FBE6D800AED786 /* LocationManager.h */,
+				120E155225FBE6D800AED786 /* LocationManager.m */,
 			);
-			path = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		12694ACE25F2ADA0006BBC1F /* Place */ = {
@@ -196,6 +218,8 @@
 			children = (
 				12BABEC225F24E5B00DA8D5A /* App */,
 				12BABEC325F24E6700DA8D5A /* Modules */,
+				12694AA525F25D7A006BBC1F /* Models */,
+				12694AA625F25D7E006BBC1F /* Services */,
 				12BABEC125F24E5300DA8D5A /* Resources */,
 			);
 			path = "avia-tickets";
@@ -228,6 +252,7 @@
 				12694AD925F2B1D5006BBC1F /* SearchRequest.h */,
 				12BABEC925F2514000DA8D5A /* Main */,
 				12694ACE25F2ADA0006BBC1F /* Place */,
+				120E155625FBE99C00AED786 /* Map */,
 				1283CB9F25F699520029767A /* Tickets */,
 			);
 			path = Modules;
@@ -237,8 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				12694AA425F25D6C006BBC1F /* ViewController */,
-				12694AA525F25D7A006BBC1F /* Models */,
-				12694AA625F25D7E006BBC1F /* Service */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -249,7 +272,6 @@
 				14502EF8FA8D68BB6A1FE360 /* Pods-avia-tickets.debug.xcconfig */,
 				8575E0BC57FD814ADA21A141 /* Pods-avia-tickets.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -376,9 +398,12 @@
 				12BABEAE25F23D0900DA8D5A /* MainViewController.m in Sources */,
 				12694AD725F2ADE4006BBC1F /* PlaceViewController.m in Sources */,
 				1283CBA325F699850029767A /* TicketsViewController.m in Sources */,
+				120E155325FBE6D800AED786 /* LocationManager.m in Sources */,
 				12694AB225F25DFA006BBC1F /* Airport.m in Sources */,
 				1283CBA925F699AF0029767A /* Ticket.m in Sources */,
 				12BABEA825F23D0900DA8D5A /* AppDelegate.m in Sources */,
+				120E155925FBE9BF00AED786 /* MapViewController.m in Sources */,
+				120E154E25FBE66800AED786 /* MapPrice.m in Sources */,
 				12BABEB925F23D0B00DA8D5A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
