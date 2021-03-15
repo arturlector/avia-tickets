@@ -7,6 +7,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "CollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +21,12 @@
     CGRect frame = [[UIScreen mainScreen] bounds];
     self.window = [[UIWindow alloc] initWithFrame: frame];
     
-    MainViewController *viewController = [MainViewController new];
+    //MainViewController *viewController = [MainViewController new];
     
-    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+    CollectionViewController *vc = [CollectionViewController new];
+    
+    UINavigationController *navigationViewController = [[UINavigationController alloc] initWithRootViewController:vc];
     
     [self.window setRootViewController:navigationViewController];
     [self.window makeKeyAndVisible];
