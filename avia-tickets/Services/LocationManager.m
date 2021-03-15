@@ -54,12 +54,14 @@
             break;
             
         case kCLAuthorizationStatusAuthorizedAlways:
+            [self.manager startUpdatingLocation];
             break;
             
         case kCLAuthorizationStatusDenied:
             break;
             
         default: {
+            break;
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Уппс! " message:@"Не удается получить локацию" preferredStyle:(UIAlertControllerStyleAlert)];
             [alert addAction: [UIAlertAction actionWithTitle:@"Ok" style:(UIAlertActionStyleDefault) handler:nil]];
             [[[UIApplication sharedApplication].windows firstObject].rootViewController presentViewController:alert animated:YES completion:nil];

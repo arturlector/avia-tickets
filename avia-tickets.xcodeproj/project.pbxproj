@@ -10,6 +10,7 @@
 		120E154E25FBE66800AED786 /* MapPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 120E154D25FBE66800AED786 /* MapPrice.m */; };
 		120E155325FBE6D800AED786 /* LocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 120E155225FBE6D800AED786 /* LocationManager.m */; };
 		120E155925FBE9BF00AED786 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 120E155825FBE9BF00AED786 /* MapViewController.m */; };
+		121CD2A825FFC0640089A3DF /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 121CD2A725FFC0640089A3DF /* TabBarController.m */; };
 		12694AA025F25D64006BBC1F /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 12694A9D25F25D64006BBC1F /* countries.json */; };
 		12694AA125F25D64006BBC1F /* cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 12694A9E25F25D64006BBC1F /* cities.json */; };
 		12694AA225F25D64006BBC1F /* airports.json in Resources */ = {isa = PBXBuildFile; fileRef = 12694A9F25F25D64006BBC1F /* airports.json */; };
@@ -37,6 +38,8 @@
 		120E155225FBE6D800AED786 /* LocationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationManager.m; sourceTree = "<group>"; };
 		120E155725FBE9BF00AED786 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		120E155825FBE9BF00AED786 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		121CD2A625FFC0640089A3DF /* TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		121CD2A725FFC0640089A3DF /* TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		12694A9D25F25D64006BBC1F /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		12694A9E25F25D64006BBC1F /* cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cities.json; sourceTree = "<group>"; };
 		12694A9F25F25D64006BBC1F /* airports.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = airports.json; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 			children = (
 				12BABEA625F23D0900DA8D5A /* AppDelegate.h */,
 				12BABEA725F23D0900DA8D5A /* AppDelegate.m */,
+				121CD2A625FFC0640089A3DF /* TabBarController.h */,
+				121CD2A725FFC0640089A3DF /* TabBarController.m */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -403,6 +408,7 @@
 				1283CBA925F699AF0029767A /* Ticket.m in Sources */,
 				12BABEA825F23D0900DA8D5A /* AppDelegate.m in Sources */,
 				120E155925FBE9BF00AED786 /* MapViewController.m in Sources */,
+				121CD2A825FFC0640089A3DF /* TabBarController.m in Sources */,
 				120E154E25FBE66800AED786 /* MapPrice.m in Sources */,
 				12BABEB925F23D0B00DA8D5A /* main.m in Sources */,
 			);
