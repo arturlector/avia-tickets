@@ -16,7 +16,22 @@
 
 @end
 
-@implementation TicketsViewController
+@implementation TicketsViewController {
+    BOOL isFavorites;
+}
+
+- (instancetype)initFavoriteTicketsController {
+    self = [super init];
+    if (self) {
+        isFavorites = YES;
+        self.tickets = [NSArray new];
+        self.title = @"Избранное";
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+        [self.tableView registerClass:[TicketTableViewCell class] forCellReuseIdentifier:TicketCellReuseIdentifier];
+    }
+    return self;
+}
+
 
 - (instancetype)initWithTickets:(NSArray *)tickets {
     self = [super init];

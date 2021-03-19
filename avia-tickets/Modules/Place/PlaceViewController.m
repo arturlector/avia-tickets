@@ -12,11 +12,14 @@
 
 #define ReuseIdentifier @"CellIdentifier"
 
-@interface PlaceViewController ()
+@interface PlaceViewController () <UISearchResultsUpdating>
 
 @property (nonatomic) PlaceType placeType;
 @property (nonatomic, strong) UISegmentedControl *segmentedControl;
 @property (nonatomic, strong) NSArray *currentArray;
+
+//Filtered
+@property (nonatomic, strong) NSArray *filteredArray;
 
 @end
 
@@ -33,6 +36,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UISearchController *searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    searchController.obscuresBackgroundDuringPresentation = NO;
+    searchController.searchResultsUpdater = self;
+    self.filteredArray = @[];
+    self.navigationItem.searchController = searchController;
     
     self.navigationController.navigationBar.tintColor = [UIColor blackColor];
     
@@ -53,6 +62,18 @@
         self.title = @"Куда";
     }
     
+}
+
+#pragma mark - UISearchResultsUpdating
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    if (searchController.searchBar.text.length > 0) {
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name CONTAINS[cd] %@", searchController.searchBar.text];
+        self.filteredArray = [self.currentArray filteredArrayUsingPredicate: predicate];
+        [self.tableView reloadData];
+    } else {
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - Actions
@@ -76,7 +97,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_currentArray count];
+    return self.filteredArray.count > 0 ? self.filteredArray.count : self.currentArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -86,13 +107,16 @@
         cell = [[UITableViewCell alloc] initWithStyle: UITableViewCellStyleSubtitle reuseIdentifier:ReuseIdentifier];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
+    
+    NSArray *array = self.filteredArray.count > 0 ? self.filteredArray : self.currentArray;
+    
     if (_segmentedControl.selectedSegmentIndex == 0) {
-        City *city = [_currentArray objectAtIndex:indexPath.row];
+        City *city = array[indexPath.row];
         cell.textLabel.text = city.name;
         cell.detailTextLabel.text = city.code;
     }
     else if (_segmentedControl.selectedSegmentIndex == 1) {
-        Airport *airport = [_currentArray objectAtIndex:indexPath.row];
+        Airport *airport = array[indexPath.row];
         cell.textLabel.text = airport.name;
         cell.detailTextLabel.text = airport.code;
     }
@@ -105,7 +129,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     DataSourceType dataType = ((int)_segmentedControl.selectedSegmentIndex) + 1;
-    [self.delegate selectPlace:[_currentArray objectAtIndex:indexPath.row] withType:_placeType andDataType:dataType];
+    
+    NSArray *array = self.filteredArray.count > 0 ? self.filteredArray : self.currentArray;
+    
+    
+    [self.delegate selectPlace:array[indexPath.row] withType:_placeType andDataType:dataType];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
