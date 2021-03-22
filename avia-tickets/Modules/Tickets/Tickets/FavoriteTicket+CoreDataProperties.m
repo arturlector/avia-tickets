@@ -14,14 +14,14 @@
 	return [NSFetchRequest fetchRequestWithEntityName:@"FavoriteTicket"];
 }
 
-@dynamic airline;
 @dynamic created;
 @dynamic departure;
 @dynamic expires;
-@dynamic flightNumber;
-@dynamic from;
-@dynamic price;
 @dynamic returnDate;
+@dynamic airline;
+@dynamic from;
 @dynamic to;
+@dynamic price;
+@dynamic flightNumber;
 
 @end
