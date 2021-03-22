@@ -7,16 +7,18 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "DataManager.h"
 #import "FavoriteTicket+CoreDataClass.h"
-#import "Ticket.h"
+#import "DataManager.h"
 
-@interface CoreDataHelper : NSObject
+@class Ticket;
+
+@interface CoreDataManager : NSObject
 
 + (instancetype)sharedInstance;
 
 - (BOOL)isFavorite:(Ticket *)ticket;
-- (NSArray *)favorites;
+- (NSArray <FavoriteTicket *> *)favorites;
+
 - (void)addToFavorite:(Ticket *)ticket;
 - (void)removeFromFavorite:(Ticket *)ticket;
 

@@ -12,6 +12,6 @@
         <attribute name="to" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="FavoriteTicket" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="FavoriteTicket" positionX="-45" positionY="0" width="128" height="164"/>
     </elements>
 </model>

@@ -11,5 +11,7 @@
 
 - (instancetype)initWithTickets:(NSArray *)tickets;
 
+- (instancetype)initFavoriteTicketsController;
+
 @end
 
